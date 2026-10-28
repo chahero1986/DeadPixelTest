@@ -17,21 +17,22 @@ struct ContentView: View {
     @State private var showColorName = false
     @State private var originalBrightness: CGFloat = 0.2
     @Environment(\.scenePhase) private var scenePhase
-    
+
     var body: some View {
         ZStack {
-            // 核心：铺满全屏 + 忽略所有安全区
-            testColors[currentIndex].color
+            // ✅ 换成 Rectangle，这才是可以撑满全屏的形状
+            Rectangle()
+                .fill(testColors[currentIndex].color)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .ignoresSafeArea()
-            
+                .ignoresSafeArea(.all, edges: .all)
+
             if showColorName {
                 Text(testColors[currentIndex].name)
                     .font(.system(size: 48, weight: .bold))
                     .foregroundColor(.white)
                     .shadow(color: .black, radius: 6)
             }
-            
+
             VStack {
                 Spacer()
                 VStack(spacing:8) {
@@ -48,6 +49,7 @@ struct ContentView: View {
             }
         }
         .statusBarHidden(true)
+        .persistentSystemOverlays(.hidden)   // iOS16+ 隐藏系统悬浮控件，非常关键
         .onTapGesture {
             withAnimation(.easeInOut) {
                 currentIndex = (currentIndex + 1) % testColors.count
