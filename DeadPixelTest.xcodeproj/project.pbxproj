@@ -1,0 +1,158 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27B9E23C2D914F4E00845A8F /* DeadPixelTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9E23B2D914F4E00845A8F /* DeadPixelTestApp.swift */; };
+		27B9E23E2D914F4E00845A8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9E23D2D914F4E00845A8F /* ContentView.swift */; };
+		27B9E2402D914F4E00845A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B9E23F2D914F4E00845A8F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27B9E2372D914F4E00845A8F /* DeadPixelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeadPixelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B9E23B2D914F4E00845A8F /* DeadPixelTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadPixelTestApp.swift; sourceTree = "<group>"; };
+		27B9E23D2D914F4E00845A8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27B9E23F2D914F4E00845A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27B9E2412D914F4E00845A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27B9E2342D914F4E00845A8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27B9E22A2D914F4E00845A8F = {
+			isa = PBXGroup;
+			children = (
+				27B9E22B2D914F4E00845A8F /* DeadPixelTest */,
+				27B9E2362D914F4E00845A8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27B9E22B2D914F4E00845A8F /* DeadPixelTest */ = {
+			isa = PBXGroup;
+			children = (
+				27B9E23B2D914F4E00845A8F /* DeadPixelTestApp.swift */,
+				27B9E23D2D914F4E00845A8F /* ContentView.swift */,
+				27B9E23F2D914F4E00845A8F /* Assets.xcassets */,
+				27B9E2412D914F4E00845A8F /* Info.plist */,
+			);
+			path = DeadPixelTest;
+			sourceTree = "<group>";
+		};
+		27B9E2362D914F4E00845A8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27B9E2372D914F4E00845A8F /* DeadPixelTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27B9E2302D914F4E00845A8F /* DeadPixelTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B9E2422D914F4E00845A8F /* Build configuration list for PBXNativeTarget "DeadPixelTest" */;
+			buildPhases = (
+				27B9E2332D914F4E00845A8F /* Sources */,
+				27B9E2342D914F4E00845A8F /* Frameworks */,
+				27B9E2352D914F4E00845A8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeadPixelTest;
+			productName = DeadPixelTest;
+			productReference = 27B9E2372D914F4E00845A8F /* DeadPixelTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27B9E2352D914F4E00845A8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B9E2402D914F4E00845A8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27B9E2332D914F4E00845A8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B9E23C2D914F4E00845A8F /* DeadPixelTestApp.swift in Sources */,
+				27B9E23E2D914F4E00845A8F /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		27B9E2432D914F4E00845A8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DeadPixelTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.deadpixeltest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		27B9E2442D914F4E00845A8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DeadPixelTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.deadpixeltest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27B9E2422D914F4E00845A8F /* Build configuration list for PBXNativeTarget "DeadPixelTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27B9E2432D914F4E00845A8F /* Debug */,
+				27B9E2442D914F4E00845A8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27B9E22A2D914F4E00845A8F /* Project object */;
+}
