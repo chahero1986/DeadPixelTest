@@ -2,7 +2,6 @@ import SwiftUI
 import UIKit
 
 struct ContentView: View {
-    // 标准坏点检测8色，全部改用RGB，兼容新版SwiftUI
     let testColors: [(name: String, color: Color)] = [
         ("Black", Color(red:0, green:0, blue:0)),
         ("White", Color(red:1, green:1, blue:1)),
@@ -21,7 +20,9 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            // 核心：铺满全屏 + 忽略所有安全区
             testColors[currentIndex].color
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .ignoresSafeArea()
             
             if showColorName {
@@ -41,8 +42,8 @@ struct ContentView: View {
                     
                     ProgressView(value: Double(currentIndex), total: Double(testColors.count - 1))
                         .tint(.white)
+                        .padding(.horizontal, 40)
                 }
-                .padding(.horizontal, 40)
                 .padding(.bottom, 40)
             }
         }
@@ -52,8 +53,8 @@ struct ContentView: View {
                 currentIndex = (currentIndex + 1) % testColors.count
             }
         }
-        .onLongPressGesture(minimumDuration: 0.3, maximumDistance: 30) {} onPressingChanged: { isPressing in
-            showColorName = isPressing
+        .onLongPressGesture(minimumDuration: 0.3) {
+            showColorName.toggle()
         }
         .gesture(
             DragGesture(minimumDistance: 30)
