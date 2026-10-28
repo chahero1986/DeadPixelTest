@@ -28,30 +28,14 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO
 
-      - name: Export unsigned IPA
+      # ========== 重点改动：不再调用xcodebuild exportArchive，手动打包IPA ==========
+      - name: Make unsigned IPA manually
         run: |
-          cat > exportOptions.plist <<EOF
-          <?xml version="1.0" encoding="UTF-8"?>
-          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-          <plist version="1.0">
-          <dict>
-            <key>method</key>
-            <string>development</string>
-            <key>signingStyle</key>
-            <string>manual</string>
-            <key>signingCertificate</key>
-            <string></string>
-            <key>provisioningProfile</key>
-            <string></string>
-          </dict>
-          </plist>
-          EOF
+          mkdir -p build/export/Payload
+          cp -r build/DeadPixelTest.xcarchive/Products/Applications/DeadPixelTest.app build/export/Payload/
+          cd build/export
+          zip -q -r DeadPixelTest.ipa Payload
           
-          xcodebuild -exportArchive \
-            -archivePath build/DeadPixelTest.xcarchive \
-            -exportOptionsPlist exportOptions.plist \
-            -exportPath build/export
-
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
